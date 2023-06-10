@@ -12,7 +12,7 @@ type Env struct{}
 
 // StartingCheck is a function for checking a env ready to running
 func (o Env) StartingCheck() {
-	err := godotenv.Load("config/.env")
+	err := godotenv.Load(".env")
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
