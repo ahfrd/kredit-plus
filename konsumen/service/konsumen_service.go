@@ -67,7 +67,7 @@ func (s *KonsumenService) Inquiry(ctx *gin.Context, request *request.InquiryRequ
 	ctx.Header("X-CSRF-Token", csrf)
 
 	var resData response.ResponseDataInquiry
-	resData.Nik = request.Nik
+	resData.Nik = helpers.EncryptRSAKey(getKonsumen.Nik)
 	resData.Tenor = request.Tenor
 	resData.Otr = request.Otr
 	resData.Bunga = request.Bunga

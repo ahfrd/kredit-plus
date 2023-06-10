@@ -1,6 +1,7 @@
 package main
 
 import (
+	"kredit-plus/helpers"
 	"kredit-plus/konsumen/controller"
 	"kredit-plus/konsumen/repository"
 	"kredit-plus/konsumen/service"
@@ -9,11 +10,11 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// func init() {
-// 	env := helpers.Env{}
-// 	env.StartingCheck()
+func init() {
+	env := helpers.Env{}
+	env.StartingCheck()
 
-// }
+}
 func main() {
 	router := gin.Default()
 	konsumenRepository := repository.NewKonsumenRepository()
